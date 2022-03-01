@@ -41,6 +41,11 @@ form.innerHTML = `<label for="exampleDataList" class="form-label">Datalist examp
   <option value="Michael">
   <option value="Peter">
   <option value="Christ">
+  <option value="Pal">
+  <option value="Walter">
+  <option value="Wass">
+  <option value="Ranavad">
+  <option value="Andrew">
 </datalist>`
 document.getElementById('searchDiv').appendChild(form)
 
