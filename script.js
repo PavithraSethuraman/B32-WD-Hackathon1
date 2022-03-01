@@ -31,12 +31,24 @@ document.getElementById('searchDiv').appendChild(title1)
 
 //creating inputbox
 
-let searchBox = document.createElement('input')
-searchBox.setAttribute('id','searchBox')
-searchBox.setAttribute('placeholder','Enter the Name')
+let form = document.createElement('form')
+form.setAttribute('id','form')
+form.innerHTML = `<label for="exampleDataList" class="form-label">Datalist example</label>
+<input class="form-control" list="datalistOptions" id="searchBox" onkeyup="nationalityApi()" placeholder="Type to search...">
+<datalist id="datalistOptions">
+  <option value="Jane">
+  <option value="Matthew">
+  <option value="Michael">
+  <option value="Peter">
+  <option value="Christ">
+</datalist>`
+document.getElementById('searchDiv').appendChild(form)
+
+let searchBox = document.getElementById('searchBox')
 searchBox.classList.add('t-box','textsize')
-searchBox.setAttribute('onkeyup','nationalityApi()')
-document.getElementById('searchDiv').appendChild(searchBox)
+document.getElementById('form').appendChild(searchBox)
+
+
 
 //lable for typing name
 
